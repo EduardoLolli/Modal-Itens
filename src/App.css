@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-color: rgb(11, 9, 24);
+}
 .card {
     margin: 50px;
     width: 250px;
@@ -13,20 +15,26 @@
     border: 1px solid rgb(253, 211, 96);
 }
 
+.card-title-div {
+}
+
 .card-title-div h2 {
     height: 90px;
-    padding: 0 15px;
+    padding: 5px 15px;
     text-align: center;
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-img-div {
     display: flex;
 }
 
-.card-info li{
+.card-info li {
     text-align: center;
-    padding:2px 5px;
+    padding: 2px 5px;
 }
 
 .card-img-div img {
@@ -50,13 +58,8 @@
     height: 100px;
 }
 
-.itens-lista {
-    width: 120px;
-    cursor: pointer;
-}
-
 .cabecalho {
-    background-color: blue;
+    background-color: rgb(134, 99, 1);
     height: 60px;
     text-align: center;
 }

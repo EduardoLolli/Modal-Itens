@@ -5,7 +5,7 @@ import ItemList from "./data";
 function Card(props) {
 
     let indice = 3;
-    console.log(props)
+
     return (
 
 
@@ -20,10 +20,10 @@ function Card(props) {
             </div>
 
             <div className="card-info">
-                <li>{listaDeItens[props.id]?.custo}</li>
+                <li>Custo: {listaDeItens[props.id]?.custo}</li>
                 <li>{listaDeItens[props.id]?.status}</li>
                 {listaDeItens[props.id]?.description.length > 52 ?
-                    <li>{listaDeItens[props.id]?.description.slice(0, 52)}<p className="modal-button">...ver mais</p></li> :
+                    <li>{listaDeItens[props.id]?.description.slice(0, 52)}<p className="modal-button" onClick={props.click} >...ver mais</p></li> :
                     <li>{listaDeItens[props.id]?.description.slice(0, 52)}</li>}
 
             </div>
