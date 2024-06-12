@@ -3,9 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgb(11, 9, 24);
 }
+
 .card {
     margin: 50px;
     width: 250px;
@@ -15,8 +17,7 @@ body{
     border: 1px solid rgb(253, 211, 96);
 }
 
-.card-title-div {
-}
+.card-title-div {}
 
 .card-title-div h2 {
     height: 90px;
@@ -70,11 +71,14 @@ body{
 }
 
 .modal {
-    width: 600px;
-    height: 550px;
-    background-color: rgba(156, 156, 156, 0.527);
-    border-radius: 15px;
-
+    width: 700px;
+    height: 350px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%, -50%);
 }
 
 .modal img {
@@ -82,9 +86,54 @@ body{
     height: 200px;
 }
 
+.modal-background {
+    background-color: rgb(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
 .closeButton {
     position: relative;
     top: 20px;
     right: 10px;
     cursor: pointer;
+}
+
+.modal-header {
+    height: 25px;
+    display: flex;
+    justify-content: end;
+}
+
+.modal-header button {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+.modal-header button:hover {
+    background-color: white;
+}
+
+.modal h1 {
+    text-align: center;
+}
+
+.modal-content {
+    display: flex;
+    padding: 10px;
+}
+
+.modal-content-info {
+    padding: 15px 10px;
 }

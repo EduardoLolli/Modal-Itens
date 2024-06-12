@@ -6,13 +6,7 @@ import Modal from './modal';
 
 const ItemList = () => {
 
-    return (
-        <div>
-            <Modal />
-        </div>
-    )
-
-   /* 
+  
     const [itemClicado, setItemClicado] = useState(null);
     const ativaModal = (object) => {
         setItemClicado(object);
@@ -69,7 +63,7 @@ const ItemList = () => {
 
         </body >
     );
-*/
+
 };
 
 

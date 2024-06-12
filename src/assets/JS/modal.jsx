@@ -2,32 +2,33 @@ import React from "react";
 import listaDeItens from "./lista";
 import ItemList from "./data";
 
-function Modal(props) {
+function Modal(props, isOpen) {
 
-    let indice = 0;
+    let indice = 1;
 
     return (
 
+        <div className="modal-background">
+            <div className='modal'>
 
+                <div className="modal-header">
+                    <button onClick={props.close}>x</button>
+                </div>
 
-        <div className='modal'>
-            <div>
-                <strong>x</strong>
-            </div>
-            <div>
-                <h1>{listaDeItens[indice].name}</h1>
-                <div><img src={listaDeItens[indice].image} alt="" /></div>
-                <div>
-                    <li>{listaDeItens[indice].custo}</li>
-                    <li>{listaDeItens[indice].status}</li>
-                    <li>{listaDeItens[indice].description}</li>
+                <h1>{listaDeItens[props.name].name}</h1>
+
+                <div className="modal-content">
+                    
+                    <div><img src={listaDeItens[props.image].image} alt="" /></div>
+
+                    <div className="modal-content-info">
+                        <li>{listaDeItens[props.custo].custo}</li>
+                        <li>{listaDeItens[props.status].status}</li>
+                        <li>{listaDeItens[props.description].description}</li>
+                    </div>
                 </div>
             </div>
-
-
-
         </div>
-
     )
 
 
