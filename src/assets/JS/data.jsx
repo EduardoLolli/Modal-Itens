@@ -4,19 +4,7 @@ import Card from './card';
 
 
 const ItemList = () => {
-
-
-/*
-    return (
-        <div>
-            <Card />
-        </div>
-    )
-*/
-
-
-
-
+    
     
         const [itemClicado, setItemClicado] = useState(null);
     
@@ -62,39 +50,26 @@ const ItemList = () => {
     
     
                 <div className='container'>
-                    {listaDeItens.map((object) => {
+                    {listaDeItens.map((obj, i) => {
     
                         return (
     
-                            <div id={object.id} className='itens-lista' onClick={() => { ativaModal(object); showModal() }} >
-    
-                                <div>
-                                    <h3>{object.name}</h3>
-                                    <img src={object.image} className='imagem-modal' />
-                                    <p>{object.name}</p>
-                                </div>
+                            <div >
+                                <Card 
+                                id = {i}/>
                             </div>)
     
                     })}
-    
-    
+
     
                     {console.log(itemClicado)}
                     {mostraModal == true ? criaTexto() : <div></div>}
     
-    
-    
-    
                 </div>
-    
-    
-    
-    
-    
     
             </body >
         );
-        
+    
 };
 
 
