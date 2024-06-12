@@ -8,7 +8,7 @@ function Modal(props) {
   return (
 
     <div onClick={props.close} className="modal-background">
-      <div className='modal'>
+      <div className='modal' onClick={(e) => { e.stopPropagation() }}>
 
         <div className="modal-header">
           <button onClick={props.close}>x</button>
