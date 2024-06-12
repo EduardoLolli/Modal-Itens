@@ -6,7 +6,7 @@ import Modal from './modal';
 
 const ItemList = () => {
 
-  
+
     const [itemClicado, setItemClicado] = useState(null);
     const ativaModal = (object) => {
         setItemClicado(object);
@@ -23,17 +23,31 @@ const ItemList = () => {
     }
     const criaTexto = () => {
         return (
-            <div className='modal-container' >
+
+            <Modal
+                close={closeModal}
+                name={itemClicado.name}
+                image={itemClicado.image}
+                custo={itemClicado.custo}
+                status={itemClicado.status}
+                description={itemClicado.description} />
+/*
+            <div className="modal-background">
                 <div className='modal'>
-
-                    <p className='closeButton' onClick={closeModal} >Fechar</p>
-                    <h2>{itemClicado.name}</h2>
-                    <img src={itemClicado.image} />
-                    <p>{itemClicado.description}</p>
-
-
+                    <div className="modal-header">
+                        <button onClick={closeModal}>x</button>
+                    </div>
+                    <h1>{itemClicado.name}</h1>
+                    <div className="modal-content">
+                        <div><img src={itemClicado.image} alt="" /></div>
+                        <div className="modal-content-info">
+                            <li>{itemClicado.custo}</li>
+                            <li>{itemClicado.status}</li>
+                            <li>{itemClicado.description}</li>
+                        </div>
+                    </div>
                 </div>
-            </div>)
+            </div>*/)
     }
 
 
@@ -42,12 +56,12 @@ const ItemList = () => {
             <div className='cabecalho'><h1>Lista de Itens</h1></div>
 
 
-            <div className='container'>
+            <div className='container cards-container'>
                 {listaDeItens.map((obj, i) => {
 
                     return (
 
-                        <div>
+                        <div >
                             <Card
                                 id={i}
                                 click={() => { ativaModal(obj); showModal() }} />
@@ -55,8 +69,6 @@ const ItemList = () => {
 
                 })}
 
-
-                {console.log(itemClicado)}
                 {mostraModal == true ? criaTexto() : <div></div>}
 
             </div>

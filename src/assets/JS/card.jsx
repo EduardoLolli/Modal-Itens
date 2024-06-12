@@ -4,7 +4,6 @@ import ItemList from "./data";
 
 function Card(props) {
 
-    let indice = 3;
 
     return (
 

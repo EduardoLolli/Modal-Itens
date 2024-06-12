@@ -2,9 +2,8 @@ import React from "react";
 import listaDeItens from "./lista";
 import ItemList from "./data";
 
-function Modal(props, isOpen) {
+function Modal(props, n) {
 
-    let indice = 1;
 
     return (
 
@@ -15,16 +14,16 @@ function Modal(props, isOpen) {
                     <button onClick={props.close}>x</button>
                 </div>
 
-                <h1>{listaDeItens[props.name].name}</h1>
+                <h1>{props.name}</h1>
 
                 <div className="modal-content">
-                    
-                    <div><img src={listaDeItens[props.image].image} alt="" /></div>
+
+                    <div><img src={props.image} alt="" /></div>
 
                     <div className="modal-content-info">
-                        <li>{listaDeItens[props.custo].custo}</li>
-                        <li>{listaDeItens[props.status].status}</li>
-                        <li>{listaDeItens[props.description].description}</li>
+                        <li>{props.custo}</li>
+                        <li>{props.status}</li>
+                        <li>{props.description}</li>
                     </div>
                 </div>
             </div>
